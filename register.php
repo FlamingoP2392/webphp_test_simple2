@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql) === TRUE) {
             // เมื่อลงทะเบียนสำเร็จ
             $_SESSION['success_message'] = "ลงทะเบียนเสร็จสิ้น";
-            header("Location: home.php");
+            header("Location: home.html");
             exit;
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;

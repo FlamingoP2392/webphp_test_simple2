@@ -1,7 +1,3 @@
-<?php
-    session_start();
-    if (isset($_SESSION['success_message'])) 
-    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +7,6 @@
     <title>Home</title>
 </head>
 <body>
-    <?php
-    {
-        echo '<p style = "color: green;">' . $_SESSION['success_message'] . '</p>';
-        unset($_SESSION['success_message']); // ลบข้อความนี้ออกจาก session
-    }
-    ?>
     <h1>Welcome to Exam</h1>
     <script>
         document.addEventListener("DOMContentLoaded", function() {

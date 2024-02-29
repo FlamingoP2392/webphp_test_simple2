@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         // เข้าสู่ระบบสำเร็จ
         $_SESSION['success_message'] = "เข้าสู่ระบบสำเร็จ";
-        header("Location: home.php");
+        header("Location: home.html");
         exit;
     } else {
         // เข้าสู่ระบบไม่สำเร็จ
