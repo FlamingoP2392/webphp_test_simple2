@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+}
+h1 {
+    text-align: center;
+    font-size: 42px;
+    font-family: sans-serif;
+    color: red;
+    text-shadow: 0px 0px 50px rgb(255, 64, 64);
+}
+h2 {
+    text-align: center;
+    font-size: 38px;
+    font-family: sans-serif;
+    color: red;
+    text-shadow: 0px 0px 50px rgb(255, 64, 64);
+}
+
+.examform {
+    background-color: black;
+    margin-top: 5%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 3px solid rgb(67, 0, 94);
+    border-radius: 30px;
+    box-shadow: 0px 0px 50px violet;
+    padding-bottom: 55vh; /* เพิ่มพื้นที่ด้านล่างของฟอร์มให้ยาวมาถึง 55% ของความสูงของหน้าจอ */
+    text-align: center; /* จัดเนื้อหาของ div.examform ไว้ตรงกลาง */
+    position: relative;
+    overflow: hidden; /* ซ่อนส่วนที่เกินขอบฟอร์ม */
+}
+.result-message {
+    display: none; /* ซ่อนข้อความเริ่มต้น */
+    color: violet;
+}
+button#buttonNo {
+    background-color: rgb(43, 43, 43);
+    color: red;
+    font-size: 50;
+    font-style:initial;
+    font-family: sans-serif;
+    width: 100px;
+    height: 52px;
+    border: 2px solid red;
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px red;
+    float: left;
+    margin-left: 20%;
+    cursor: pointer;
+    position: relative; /* ตั้งค่าให้ปุ่ม No เป็นตำแหน่งสัมพันธ์กับ div.examform */
+}
+
+/* CSS สำหรับเมื่อเมาส์ชี้หรือคลิกที่ปุ่ม No */
+#buttonNo:hover, #buttonNo:active {
+    transform: translateX(-10px); /* เคลื่อนที่ปุ่มไปทางซ้ายเมื่อมีการชี้หรือคลิก */
+}
+
+button#buttonYes {
+    background-color: rgb(43, 43, 43);
+    color: rgb(43, 255, 0);
+    font-size: 50;
+    font-style:initial;
+    font-family: sans-serif;
+    width: 100px;
+    height: 52px;
+    border: 2px solid rgb(45, 255, 62);
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px rgb(45, 255, 62);
+    float: right;
+    margin-right: 20%;
+    cursor: pointer;
+}
+p {
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(67, 0, 94);
+    text-shadow: 0px 0px 80px violet; /* เพิ่มเงาให้กับข้อความ */
+}

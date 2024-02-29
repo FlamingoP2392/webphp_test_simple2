@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+}
+h1 {
+    text-align: center;
+    font-size: 42px;
+    font-family: sans-serif;
+    color: red;
+    text-shadow: 0px 0px 50px rgb(255, 64, 64); /* เพิ่มเงาให้กับข้อความ */
+}
+p {
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    color: azure;
+}
+a {
+    text-decoration: none;
+    font-size: 22px;
+    font-family: sans-serif;
+    color: chartreuse;
+}
+a:hover {
+    text-decoration: underline; /* เพิ่มเส้นใต้เมื่อ hover */
+    text-shadow: 0px 0px 50px rgb(73, 255, 73); /* เพิ่มเงาฟุ้งเมื่อ hover */
+}
+form {
+    background-color: rgb(0, 0, 0);
+    margin-left: 37%;
+    margin-right: 37%;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border: 3px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 20px red; /* เพิ่มเงาฟุ้งกระจาย */
+}
+input {
+    height: 24px;
+    width: 200px;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+button {
+    background-color: black;
+    font-size: 18px;
+    color: white;
+    border: 2px solid chartreuse;
+    border-radius: 5px;
+}
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px rgb(41, 255, 41);
+}
