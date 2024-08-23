@@ -5,7 +5,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "16112004";  
-$dbname = "membertest";
+$dbname = "testregister";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -14,30 +14,30 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // ตรวจสอบข้อมูลไม่ว่างเปล่าก่อนการเพิ่มลงในฐานข้อมูล
-    if (!empty($_POST["m_name"]) && !empty($_POST["m_password"]) && !empty($_POST["confirm_password"]) && !empty($_POST["m_age"])) {
+    if (!empty($_POST["user_name"]) && !empty($_POST["user_password"]) && !empty($_POST["confirm_password"]) && !empty($_POST["user_age"])) {
 
         // ดำเนินการเพิ่มข้อมูลเฉพาะเมื่อข้อมูลไม่ว่างเปล่า
-        $m_name = $_POST["m_name"];
-        $m_password = $_POST["m_password"];
+        $user_name = $_POST["user_name"];
+        $user_password = $_POST["user_password"];
         $confirm_password = $_POST["confirm_password"];
-        $m_age = $_POST["m_age"];
+        $user_age = $_POST["user_age"];
 
         // ตรวจสอบความยาวของรหัสผ่าน
-        if (strlen($m_password) < 6) {
+        if (strlen($user_password) < 6) {
             $_SESSION['alert_message'] = "รหัสผ่านต้องมีความยาวอย่างน้อย 6 ตัว";
             header("Location: registerpage.php");
             exit;
         }
 
         // ตรวจสอบว่ารหัสผ่านและรหัสผ่านยืนยันตรงกันหรือไม่
-        if ($m_password !== $confirm_password) {
+        if ($user_password !== $confirm_password) {
             $_SESSION['alert_message'] = "รหัสผ่านและรหัสผ่านยืนยันไม่ตรงกัน";
             header("Location: registerpage.php");
             exit;
         }
 
         // เพิ่มข้อมูลลงในฐานข้อมูล
-        $sql = "INSERT INTO userlogin (m_name, m_password, m_age) VALUES ('$m_name', '$m_password', '$m_age')";
+        $sql = "INSERT INTO userlogin (user_name, user_password, user_age) VALUES ('$user_name', '$user_password', '$user_age')";
         if ($conn->query($sql) === TRUE) {
             // เมื่อลงทะเบียนสำเร็จ
             $_SESSION['success_message'] = "ลงทะเบียนเสร็จสิ้น";

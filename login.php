@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $servername = "localhost";
     $username = "root";
     $password = "16112004";  
-    $dbname = "membertest";
+    $dbname = "testregister";
 
     $conn = new mysqli ($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
@@ -15,14 +15,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // ตรวจสอบข้อมูลไม่ว่างเปล่าก่อนการเพิ่มลงในฐานข้อมูล
-        if (!empty($_POST["m_name"]) && !empty($_POST["m_password"])) {
+        if (!empty($_POST["user_name"]) && !empty($_POST["user_password"])) {
     
         // ดำเนินการเพิ่มข้อมูลเฉพาะเมื่อข้อมูลไม่ว่างเปล่า
-        $m_name = $_POST["m_name"];
-        $m_password = $_POST["m_password"];
+        $user_name = $_POST["user_name"];
+        $user_password = $_POST["user_password"];
+
+
+    // รับค่าจากฟอร์ม
+    $user_name = $_POST["user_name"];
+    $user_password = $_POST["user_password"];
 
     // ค้นหาผู้ใช้ในฐานข้อมูล
-    $sql = "SELECT * FROM member WHERE m_name='$m_name' AND m_password='$m_password'";
+    $sql = "SELECT * FROM userlogin WHERE user_name='$user_name' AND user_password='$user_password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {

@@ -17,8 +17,8 @@
 <body>
     <h1>Login</h1>
     <form action="login.php" method="post">
-        <p>ชื่อผู้ใช้ <input type="text" name="m_name"><br></p>
-        <p>รหัสผ่าน <input type="password" name="m_password"><br></p>
+        <p>ชื่อผู้ใช้ <input type="text" name="user_name"><br></p>
+        <p>รหัสผ่าน <input type="password" name="user_password"><br></p>
         <p><button type="submit">เข้าสู่ระบบ</button></p>
     </form>
     <p>ยังไม่มีบัญชีผู้ใช้? <a href="registerpage.php">ลงทะเบียน</a></p>

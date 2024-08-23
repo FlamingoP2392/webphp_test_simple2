@@ -18,10 +18,10 @@
     <h1>Register</h1>
     <!-- แบบฟอร์มลงทะเบียน -->
     <form id="registerForm" action="register.php" method="post">
-        <p>ชื่อผู้ใช้ <input type="text" name="m_name"><br></p>
-        <p>รหัสผ่าน <input type="password" name="m_password"><br></p>
+        <p>ชื่อผู้ใช้ <input type="text" name="user_name"><br></p>
+        <p>รหัสผ่าน <input type="password" name="user_password"><br></p>
         <p>ยืนยันรหัสผ่าน <input type="password" name="confirm_password"><br></p>
-        <p>อายุ <input type="text" name="m_age"><br></p>
+        <p>อายุ <input type="text" name="user_age"><br></p>
         <p><button type="submit">ลงทะเบียน</button></p>
     </form>
     <p>มีบัญชีอยู่แล้ว? <a href="loginpage.php">เข้าสู่ระบบ</a></p>
